@@ -18,13 +18,14 @@ class MyUsers extends Controller
 
     public function loadView($name){
 
-        // return ('contact');
         echo $name;
-         return view('contact', ['users'=>['triveni','rupali','sandip','rt sir']]);
+         return view('contactt', ['users'=>['triveni','rupali','sandip','rt sir']]);
     }
 
     public function index(){
         echo 'hello from controller';
+        // return view('contact', ['user'=>'Triveni']);
+        return view('home', ['user'=>['T', 'R', 'P','y']]);
     }
 }
 

@@ -15,8 +15,14 @@ use App\Http\Controllers\MyUsers;
 |
 */
 
-Route::get('/ ', function () {
-    return view('welcome');
+// Route::get('/{user} ', function ($user) {
+//     echo $user ;
+//     return view('welcome');
+// });
+
+Route::get('/home/about', function() {
+
+    return view('home');
 });
 
 // Route::get('/demo',function(){
@@ -46,10 +52,10 @@ Route::get('/ ', function () {
 //     return view('about');
 // });
 
-Route::get('/about/{company}', function ($company) {
-    echo $company;
-    return view('about', ['company'=>$company]);
-});
+// Route::get('/about/{company}', function ($company) {
+//     echo $company;
+//     return view('about', ['company'=>$company]);
+// });
 
 // Route::get('/about', function () {
 //     return view('contact');
@@ -70,4 +76,6 @@ Route::get('/about/{company}', function ($company) {
 // Route::get('users/{name}', [MyUsers::class, 'loadView']);
 // Route::get('users', [MyUsers::class, 'loadView']);
 // Route::view('/contact', 'contact');
-Route::get('/contact/{name}' , [MyUsers::class, 'loadView']);// myUsers class me jo load View function hai
+// Route::get('/contact/{name}' , [MyUsers::class, 'index']);// myUsers class me jo load View function hai
+// Route::get('/contactt/{name}' , [MyUsers::class, 'loadView']);// myUsers class me jo load View function hai
+// Route::get('home',[MyUsers::class, 'index']);
